@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap"
+     rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family:'poppins',sans-serif ;
+            line-height: 1.6;
+            background-color: white;
+            color: black;
+            transition: background-color 0.5s ease, color 0.5s ease;
+            padding-top: 60px;
+        }
+
+        header {
+            text-align: left;
+            padding: 50px 20px;
+            background-color: black;
+            color: white;
+            background: url('https://www.bmw.com/etc.clientlibs/settings/wcm/designs/bmwcom/base/resources/ci2020/img/logo-bmw-com-gray.svg') no-repeat center;
+            background-size: cover;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-attachment: fixed;
+
+        }
+
+        section {
+            height: 200vh; 
+            padding: 20px;
+        }
+
+        body.scrolled {
+            background-color: black;
+            color: white;
+        }
+
+        nav {
+    background: linear-gradient(90deg, #000000, #434343);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px 0;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav a {
+    color: white;
+    padding: 12px 25px;
+    font-weight: bold;
+    transition: 0.3s;
+    
+}
+
+nav a:hover {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}
+
+
+        #qw {
+            font-size: 20px;
+            color: brown;
+            text-align: center;
+        }
+
+        #lk {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .grid-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .grid-container div {
+            width: 300px;
+            height: 200px;
+            border: 2px solid rgb(158, 144, 144);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .grid-container div:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        #b {
+            background-image: url("https://img.freepik.com/free-photo/silver-sedan-with-red-lights-parked-port_114579-4385.jpg");
+        }
+
+        #kj {
+            background-image: url("https://dealerimages.dealereprocess.com/image/upload/3203362");
+        }
+
+        #jh {
+            background-image: url("https://hips.hearstapps.com/hmg-prod/images/2025-bmw-z4-m40i-6mt-251-66f43f8382990.jpg?crop=0.637xw:0.477xh;0.114xw,0.380xh&resize=1200:*");
+        }
+
+        .grid-container a {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        section {
+            height: auto; 
+            padding: 50px 20px;
+}
+footer {
+    background: linear-gradient(90deg, #000000, #434343);
+    padding: 30px 10px;
+    font-size: 14px;
+}
+
+
+footer a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+html{
+    scroll-behavior: smooth;
+}
+h1{
+    font-family: 'playfair display',serif;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    color: #000000;
+    
+}
+h2{
+    font-family: 'playfair display',serif;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    color: rgb(255, 253, 253);
+}
+button{
+    border-radius: 20px;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+button:hover{
+    background: darkred;
+    transform: scale(1.1);
+}
+.slideshow-container{
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+.slide{
+    display: none;
+    position: absolute;
+    width: 100%;
+    animation: fade 1.5s ease-in-out;
+}
+@keyframes fade {
+        from { opacity: 0.4; }
+        to { opacity: 1; }
+    }
+
+    .slideshow-container img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: 20px;
+        transition: 0.3s;
+        border: none;
+    }
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev { left: 0; }
+    .next { right: 0; }
+    .offer-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+    background: #1c1c1c;
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.offer-section img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.offer-content {
+    max-width: 50%;
+}
+
+.offer-content h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #000;
+}
+
+.offer-content p {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.offer-link {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.offer-link:hover {
+    text-decoration: underline;
+}
+#color{
+    color: white;
+}
+#color2{
+    color: antiquewhite;
+}
+
+    
+  </style>
+    
+</head>
+<body>
+    <header>
+       
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h1>Welcome to Arjun's AUTOMOBILE</h1>
+            <img src="https://www.bmw.com/etc.clientlibs/settings/wcm/designs/bmwcom/base/resources/ci2020/img/logo-bmw-com-gray.svg" width="50" alt="BMW Logo">
+        </div>
+    </header>
+    
+    
+    <section>
+        <p id="qw"><b>Here you are going to see the magic.</b></p>
+        <button id="menu-toggle" style="display: none;">☰ Menu</button>
+
+        <nav>
+            <a href="major.html" class="hover">Home</a>
+            <a href="https://www.bmw.in/en/all-models.html?tl=grp-wdpl-bcom-mix-mn-.-nscf-.-.-" class="hover">Models of BMW</a>
+            <a href="https://www.bmw.com/en/magazine/automotive-life/my-bmw-app-wallpapers.html" class="hover">Wallpapers</a>
+            <a href="https://www.bmw.com/en/footer/about-bmw-com.">About</a>
+        </nav>
+
+        <p id="lk">The Dream Brand Of Every Man</p>
+
+        <div class="grid-container">
+            <div id="b"><a href="https://www.bmw.in/en/all-models.html?filters={%22bodyType%22:[%22sedan%22]}">Sedan</a></div>
+            <div id="kj"><a href="https://www.bmw.in/en/all-models.html?filters={%22bodyType%22:[%22coupe%22]}">Coupe</a></div>
+            <div id="jh"><a href="https://www.bmw.in/en/all-models.html?filters={%22bodyType%22:[%22roadster%22]}">Roadster</a></div>
+        </div>
+    </section>
+    <section id="featured">
+        <h2 style="text-align: center;">Featured Cars of my series</h2>
+        <div class="grid-container">
+            <div style="background-image: url(https://www.bmw-m.com/content/dam/bmw/marketBMW_M/www_bmw-m_com/all-models/m-automobile/m2coupe/2024/bmw-m2-hd-01.jpg);">
+                <a href="https://www.bmw.in/en/all-models/m-series/bmw-2-series-m-models/2024/bmw-m2-coupe.html">BMW M2</a>
+            </div>
+            <div style="background-image: url(https://stimg.cardekho.com/images/carexteriorimages/930x620/BMW/7-Series/10575/1689671971561/front-view-118.jpg);">
+                <a href="https://www.bmw.in/en/all-models/7-series/sedan/2022/bmw-7-series-sedan-highlights.html">BMW 7 Series</a>
+            </div>
+            <div style="background-image: url('https://images.carandbike.com/car-images/large/bmw/i7/bmw-i7.jpg');">
+                <a href="https://www.bmw.in/en/all-models/7-series/sedan/2022/bmw-7-series-sedan-highlights.html">BMW i7 (Electric)</a>
+            </div>
+        </div>
+    </section>
+    <section id="gallery" style="text-align: center; margin-top: 50px;">
+        <h2>THE X5's 25 YEAR</h2>
+        <div class="grid-container">
+            <div style="background-image: url('https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/25x5/25x5-01-stage-hd.jpg?imwidth=1440');">
+                <a href="https://www.bmw.com/en/freude/25-years-of-the-bmw-x5-changing-with-the-times.html">THE LEGEND</a>
+            </div>
+            <div style="background-image: url('https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/25x5/25x5-19-media-hd.jpg?imwidth=1440');">
+                <a href="https://www.bmw.in/en/all-models/x-series/X5/2023/bmw-x5-overview.html">MASTERPIECE</a>
+            </div>
+            <div style="background-image: url('https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/freude/25x5/25x5-03-media-hd.jpg?imwidth=1440');">
+                <a href="https://bmwindia.co.in/offers/testdrive/x5/">premium</a>
+            </div>
+        </div>
+    </section>
+    <section id="contact" style="text-align: center; margin-top: 50px;">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required style="padding: 10px; margin: 10px;"><br>
+            <input type="email" placeholder="Your Email" required style="padding: 10px; margin: 10px;"><br>
+            <textarea placeholder="Your Message" rows="4" style="padding: 10px; margin: 10px;"></textarea><br>
+            <button type="submit" style="padding: 10px 20px; background-color: red; color: white; border: none;">Send</button>
+        </form>
+    <section class="offer-section">
+        <img src="https://www.bmw.in/en/index/_jcr_content/root/maincontent/contentblueprint_1532906499/contentblueprint/contentblueprint/image.coreimg.jpeg/1740646378478/1502x846.jpeg" alt="BMW Special Offer">
+        <div class="offer-content">
+            <h2 id="color">BMW Special Offers</h2>
+            <p id="color2">Monthly EMI starting from Rs. 34,999*/Month. Check out similar BMW finance offers available across the BMW range.</p>
+            <a href="https://www.bmw.in/en/topics/special-offers.html" class="offer-link">Know more →</a>
+        </div>
+    </section>
+    
+
+    </section>
+    <div class="slideshow-container">
+    <div class="slide fade">
+        <img src="https://img.freepik.com/free-photo/silver-sedan-with-red-lights-parked-port_114579-4385.jpg" alt="Sedan">
+    </div>
+    <div class="slide fade">
+        <img src="https://dealerimages.dealereprocess.com/image/upload/3203362" alt="Coupe">
+    </div>
+    <div class="slide fade">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/2025-bmw-z4-m40i-6mt-251-66f43f8382990.jpg?crop=0.637xw:0.477xh;0.114xw,0.380xh&resize=1200:*" alt="Roadster">
+    </div>
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+  <script>
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                document.body.classList.add('scrolled');
+            } else {
+                document.body.classList.remove('scrolled');
+            }
+        });
+        let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("slide");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000);
+    } 
+
+    function changeSlide(n) {
+        slideIndex += n;
+        showSlides();
+    }
+    </script>
+    <footer>
+        <p>&copy; 2025 Arjun's AUTOMOBILE. All rights reserved.</p>
+        <p>Follow us: 
+            <a href="https://www.facebook.com" target="_blank">Facebook</a> | 
+            <a href="https://www.instagram.com/_arjun_nirwal96/" target="_blank">Instagram</a> | 
+            <a href="https://www.twitter.com" target="_blank">Twitter</a>
+        </p>
+    </footer>
+    
+
+</body>
+</html>
